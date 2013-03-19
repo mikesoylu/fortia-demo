@@ -1,4 +1,4 @@
-fortia-demo
+Fortia Demo
 ===========
 
 Simple demo app to display fortia's structure and features.
