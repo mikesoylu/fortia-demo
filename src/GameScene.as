@@ -12,10 +12,12 @@ package {
 		
 		override public function init(e:Event):void {
 			super.init(e);
-			// enqueue the static contents of the Asset class
-			fAssetManager.enqueue(Assets);
+			// create an asset manager with the name:game
+			fAssetManager.addManager("game");
+			// enqueue the static contents of the Asset class and give it a name
+			fAssetManager.enqueue("game", Assets);
 			// start loading the assets
-			fAssetManager.loadQueue(onAssetsLoaded);
+			fAssetManager.loadQueues(onAssetsLoaded);
 			
 			function onAssetsLoaded():void {
 				// add a player
